@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUREX SHOPPING MALL · GHC market</title>
+  <!-- Google Font & simple CSS reset -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free) for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f7f5;  /* warm light background – mall vibes */
+      color: #1e1e1e;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* marketing header — bold, premium, "LUREX MALL" */
+    .marketing-bar {
+      background: #0c1a2b; /* deep navy, luxury feel */
+      color: white;
+      padding: 10px 0;
+      font-size: 0.9rem;
+      letter-spacing: 0.8px;
+    }
+
+    .marketing-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .ghc-promo {
+      background: #eab308;
+      color: #0c1a2b;
+      padding: 6px 18px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ghc-promo i {
+      font-size: 1rem;
+    }
+
+    /* main header */
+    .main-header {
+      background: white;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 2px solid #f1ebe7;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .lurex-logo {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(145deg, #1e2c3a, #0f1a24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .lurex-tag {
+      background: #f0b90b;
+      color: #0c1a2b;
+      padding: 4px 14px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: inline-block;
+    }
+
+    .mall-badge {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .mall-badge span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #f4f2f0;
+      padding: 8px 18px;
+      border-radius: 40px;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    /* hero — massive marketing message */
+    .hero {
+      padding: 60px 0 40px;
+      background: linear-gradient(112deg, #fefcf9 0%, #fffaf5 100%);
+      border-bottom: 1px solid #e7dfd9;
+    }
+
+    .hero-grid {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1 1 300px;
+    }
+
+    .hero-text h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      color: #0c1a2b;
+      margin-bottom: 16px;
+    }
+
+    .hero-accent {
+      color: #b77b4a;  /* warm brass, premium */
+      border-bottom: 4px solid #eab308;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    .ghc-currency {
+      background: #0c1a2b;
+      color: #ffd966;
+      padding: 4px 14px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-left: 8px;
+    }
+
+    .hero-desc {
+      font-size: 1.2rem;
+      color: #3a4a5a;
+      margin: 24px 0 32px;
+      max-width: 550px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-number {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #0c1a2b;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: #5e6f7e;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero-visual {
+      flex: 1 1 300px;
+      background: #eaddd2;
+      border-radius: 40px 40px 40px 0;
+      padding: 30px 25px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      background-image: radial-gradient(circle at 80% 30%, #fff6e8 2%, transparent 30%);
+      box-shadow: 20px 20px 0 rgba(12,26,43,0.08);
+    }
+
+    .category-icon-bundle {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 22px;
+    }
+
+    .icon-card {
+      background: white;
+      width: 90px;
+      height: 90px;
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 0 #d2c1b3;
+      font-weight: 600;
+      color: #1e2e3f;
+      transition: all 0.2s;
+    }
+
+    .icon-card i {
+      font-size: 2.2rem;
+      margin-bottom: 6px;
+      color: #b77b4a;
+    }
+
+    .icon-card span {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    /* category sections – "sell all products" */
+    .section-title {
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin: 56px 0 16px;
+      color: #0c1a2b;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .section-title i {
+      color: #eab308;
+      font-size: 2rem;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 28px;
+      margin-top: 16px;
+    }
+
+    .category-card {
+      background: white;
+      padding: 28px 12px;
+      border-radius: 32px;
+      text-align: center;
+      transition: 0.2s ease;
+      border: 1px solid #efebe8;
+      box-shadow: 0 12px 0 #f1ebe7;
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+      border-color: #eab308;
+      box-shadow: 0 16px 0 #e7d8c4;
+    }
+
+    .category-card i {
+      font-size: 2.6rem;
+      color: #0f1e2c;
+      margin-bottom: 16px;
+    }
+
+    .category-card h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .category-card p {
+      color: #5f6c7a;
+      font-size: 0.9rem;
+    }
+
+    .mall-extra {
+      background: #e9e2db;
+      margin: 70px 0 30px;
+      padding: 48px 40px;
+      border-radius: 60px 20px 60px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .extra-text h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1a2c3b;
+    }
+
+    .extra-text p {
+      font-size: 1.1rem;
+      margin-top: 12px;
+      max-width: 500px;
+      color: #2b404e;
+    }
+
+    .ghc-stamp {
+      background: #0c1a2b;
+      padding: 18px 32px;
+      border-radius: 60px;
+      color: #ffde7a;
+      font-weight: 800;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      letter-spacing: 2px;
+      box-shadow: 12px 12px 0 #b38b5f;
+    }
+
+    /* GHC website specific banner */
+    .ghc-payments {
+      background: white;
+      border: 2px solid #ded1c5;
+      border-radius: 80px;
+      padding: 14px 30px;
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      margin: 40px 0 10px;
+      font-weight: 600;
+      flex-wrap: wrap;
+    }
+
+    .ghc-payments i {
+      font-size: 1.5rem;
+      color: #1e3a4e;
+    }
+
+    .btn {
+      background: #0c1a2b;
+      color: white;
+      padding: 16px 44px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      border: none;
+      cursor: pointer;
+      transition: 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      border: 2px solid #0c1a2b;
+    }
+
+    .btn:hover {
+      background: #eab308;
+      color: #0c1a2b;
+      border-color: #eab308;
+    }
+
+    .btn i {
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background: #0c1a2b;
+      color: #dbdbdb;
+      padding: 48px 0;
+      margin-top: 80px;
+      border-radius: 40px 40px 0 0;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+
+    .footer-logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: -0.5px;
+    }
+
+    .footer-logo span {
+      color: #eab308;
+      font-weight: 800;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 48px;
+      color: #a0aec0;
+      font-size: 0.9rem;
+    }
+
+    hr {
+      border: 0.5px solid #2a3a48;
+      margin: 30px 0 20px;
+    }
+    /* responsiveness */
+    @media (max-width: 700px) {
+      .hero-text h1 { font-size: 2.4rem; }
+      .section-title { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- top marketing bar — LUREX SHOPPING MALL message + GHC official -->
+  <div class="marketing-bar">
+    <div class="container">
+      <div style="display: flex; gap: 12px; align-items: center;">
+        <i class="fas fa-crown" style="color: #eab308;"></i>
+        <span style="font-weight: 600;">🇬🇭 LUREX MALL · ACCRA</span>
+      </div>
+      <div class="ghc-promo">
+        <i class="fas fa-coins"></i> ALL PRICES IN GHC • FREE DELIVERY OVER 500 GHC
+      </div>
+    </div>
+  </div>
+
+  <!-- header with logo & mall vibe -->
+  <header class="main-header">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <div class="logo-area">
+        <span class="lurex-logo">LUREX🛍️</span>
+        <span class="lurex-tag"><i class="fas fa-check-circle"></i> GHC MALL</span>
+      </div>
+      <div class="mall-badge">
+        <span><i class="fas fa-truck-fast"></i> 1-2 hrs · GHC</span>
+        <span><i class="fas fa-wallet"></i> Pay with GHC</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO: marketing punch "all products, clothing, furniture, shoes, bags, books, everything" -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>
+          <span class="hero-accent">EVERYTHING</span><br>UNDER ONE DOME
+        </h1>
+        <div style="display: flex; align-items: center; gap: 8px; margin-top: 8px;">
+          <span class="ghc-currency"><i class="fas fa-cedi-sign"></i> GHC ONLY</span>
+          <span style="background: #ffe8d9; padding: 6px 18px; border-radius: 40px; font-weight: 600;">2,000+ brands</span>
+        </div>
+        <p class="hero-desc">
+          <strong>LUREX SHOPPING MALL</strong> – your GHC destination for <strong>clothing, furniture, shoes, bags, books</strong> & beyond. 
+          Real stock, real GHC prices, real fast.
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">50k+</span>
+            <span class="stat-label">Happy GHC shoppers</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">15k</span>
+            <span class="stat-label">Items · GHC</span>
+          </div>
+        </div>
+        <div style="margin-top: 40px;">
+          <button class="btn"><i class="fas fa-bag-shopping"></i> SHOP GHC NOW</button>
+          <span style="margin-left: 20px; font-weight: 500;"><i class="fas fa-shield-alt"></i> secure checkout in Cedis</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <!-- visual representation of product categories: exactly clothing, furniture, shoes, bags, books + more -->
+        <div class="category-icon-bundle">
+          <div class="icon-card">
+            <i class="fas fa-shirt"></i>
+            <span>Clothing</span>
+          </div>
+          <div class="icon-card">
+            <i class="fas fa-couch"></i>
+            <span>Furniture</span>
+          </div>
+          <div class="icon-card">
+            <i class="fas fa-shoe-prints"></i>
+            <span>Shoes</span>
+          </div>
+          <div class="icon-card">
+            <i class="fas fa-bag-shopping"></i>
+            <span>Bags</span>
+          </div>
+          <div class="icon-card">
+            <i class="fas fa-book"></i>
+            <span>Books</span>
+          </div>
+          <div class="icon-card">
+            <i class="fas fa-ellipsis-h"></i>
+            <span>other</span>
+          </div>
+        </div>
+        <p style="width: 100%; text-align: center; margin-top: 16px; font-weight: 600; color: #2b404e;">
+          <i class="fas fa-tag" style="color: #b77b4a;"></i> GHC exclusive prices
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- GHC website payment & trust stripe -->
+    <div class="ghc-payments">
+      <i class="fas fa-cedi-sign"></i> GHC PRICING · 
+      <i class="fas fa-mobile-alt"></i> GHC MALL APP · 
+      <i class="fas fa-credit-card"></i> momo/gh-link · 
+      <span style="background: #0c1a2b; color: #f9d342; padding: 6px 16px; border-radius: 50px;">#LUREXGHC</span>
+    </div>
+  </div>
+  
+  <!-- MAIN SELL SECTION – ALL PRODUCT CATEGORIES (explicitly clothing, furniture, shoes, bags, books, other) -->
+  <div class="container">
+    <div class="section-title">
+      <i class="fas fa-store-alt"></i> 
+      <span>LUREX MART · GHC departments</span>
+    </div>
+    <p style="font-size: 1.2rem; margin-bottom: 16px; color: #3d4f5d;">Everything sold here — in Ghana Cedis (GHC) on official website</p>
+    
+    <div class="category-grid">
+      <!-- CLOTHING -->
+      <div class="category-card">
+        <i class="fas fa-tshirt"></i>
+        <h3>Clothing</h3>
+        <p>Shirts, dresses, native wear, jeans, kids · from 45 GHC</p>
+      </div>
+      <!-- FURNITURE -->
+      <div class="category-card">
+        <i class="fas fa-chair"></i>
+        <h3>Furniture</h3>
+        <p>Sofas, beds, tables, decor · pay in GHC, deliver today</p>
+      </div>
+      <!-- SHOES -->
+      <div class="category-card">
+        <i class="fas fa-footprint"></i>
+        <h3>Shoes</h3>
+        <p>Sneakers, heels, sandals, boots · 100% original GHC stock</p>
+      </div>
+      <!-- BAGS -->
+      <div class="category-card">
+        <i class="fas fa-shopping-bag"></i>
+        <h3>Bags</h3>
+        <p>Handbags, backpacks, travel · luxury & everyday GHC</p>
+      </div>
+      <!-- BOOKS -->
+      <div class="category-card">
+        <i class="fas fa-book-open"></i>
+        <h3>Books</h3>
+        <p>Fiction, textbooks, children · stationery, all in GHC</p>
+      </div>
+      <!-- OTHER STUFFS (explicit "other staffs") -->
+      <div class="category-card">
+        <i class="fas fa-boxes"></i>
+        <h3>Other stuffs</h3>
+        <p>Electronics, kitchen, toys, beauty · 10k+ items, GHC</p>
+      </div>
+    </div>
+
+    <!-- EXTRA: furniture + books + bags visual callout, marketing twist -->
+    <div style="background: #fcf7f0; border-radius: 60px; padding: 48px 32px; margin: 60px 0 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+      <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+        <div><i class="fas fa-couch" style="font-size: 2.6rem; color: #996633;"></i><br><span style="font-weight: 700;">350+ sofas</span><br><small>in GHC</small></div>
+        <div><i class="fas fa-gem" style="font-size: 2.6rem; color: #b77b4a;"></i><br><span style="font-weight: 700;">Lurex Luxe bags</span><br><small>from 299 GHC</small></div>
+        <div><i class="fas fa-book" style="font-size: 2.6rem; color: #2b5876;"></i><br><span style="font-weight: 700;">bestsellers</span><br><small>GHC 20–150</small></div>
+        <div><i class="fas fa-cedi-sign" style="font-size: 2.6rem; color: #0c1a2b;"></i><br><span style="font-weight: 700;">100% GHC</span><br><small>no forex</small></div>
+      </div>
+      <a href="#" style="background: #0c1a2b; color: white; padding: 16px 36px; border-radius: 60px; text-decoration: none; font-weight: 700;">GHC flash sale →</a>
+    </div>
+
+    <!-- massive marketing block: "LUREX SHOPPING MALL sell all products" -->
+    <div class="mall-extra">
+      <div class="extra-text">
+        <h2>🇬🇭 GHC WEBSITE • LUREX MALL</h2>
+        <p><strong>Sell everything:</strong> fashion, furniture, shoes, bags, books, electronics, sporting goods, toys & more. <span style="background: #eab308; padding: 3px 12px; border-radius: 60px; font-weight: 700;">over 45 categories</span></p>
+        <p style="font-size: 1rem; margin-top: 24px;"><i class="fas fa-check" style="background: #0c1a2b; color: white; border-radius: 50%; padding: 4px;"></i> Official GHC mall – no exchange rate surprises</p>
+      </div>
+      <div class="ghc-stamp">
+        <i class="fas fa-cedi-sign"></i> GHC
+      </div>
+    </div>
+
+    <!-- small gallery: other staffs (marketing) -->
+    <div style="display: flex; gap: 16px; margin-top: 20px; flex-wrap: wrap; justify-content: space-between;">
+      <div style="background: white; border-radius: 30px; padding: 20px 28px; box-shadow: 0 4px 0 #ddd; flex:1;"><i class="fas fa-robot" style="color: #3b5c7a;"></i> Electronics & accessories <strong>GHC prices</strong></div>
+      <div style="background: white; border-radius: 30px; padding: 20px 28px; box-shadow: 0 4px 0 #ddd; flex:1;"><i class="fas fa-baby"></i> Baby & kids <strong>GHC stock</strong></div>
+      <div style="background: white; border-radius: 30px; padding: 20px 28px; box-shadow: 0 4px 0 #ddd; flex:1;"><i class="fas fa-dog"></i> Pet supplies <strong>shop GHC</strong></div>
+    </div>
+  </div>
+
+  <!-- FOOTER — strong lurex shopping mall identity, GHC website -->
+  <footer>
+    <div class="container footer-content">
+      <div style="max-width: 300px;">
+        <div class="footer-logo">
+          LUREX<span>⸻MALL</span>
+        </div>
+        <p style="margin: 24px 0; color: #cbd5e0; font-size: 1.05rem;">Your one-stop GHC e‑commerce destination. Clothing, furniture, shoes, bags, books & other stuffs — all priced in Ghana Cedis.</p>
+        <div style="display: flex; gap: 22px; font-size: 1.6rem;">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-x-twitter"></i>
+          <i class="fab fa-tiktok"></i>
+        </div>
+      </div>
+      <div style="display: flex; gap: 60px; flex-wrap: wrap;">
+        <div>
+          <h4 style="color: white; font-size: 1.2rem; margin-bottom: 20px;">GHC mall</h4>
+          <ul style="list-style: none;">
+            <li style="margin-bottom: 12px;"><i class="fas fa-cedi-sign"></i> All prices GHC</li>
+            <li style="margin-bottom: 12px;">Clothing</li>
+            <li style="margin-bottom: 12px;">Furniture</li>
+            <li style="margin-bottom: 12px;">Shoes & bags</li>
+            <li style="margin-bottom: 12px;">Books & media</li>
+            <li style="margin-bottom: 12px;">Other stuffs</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: white; font-size: 1.2rem; margin-bottom: 20px;">LUREX PROMISE</h4>
+          <ul style="list-style: none;">
+            <li style="margin-bottom: 12px;">GHC protected payments</li>
+            <li style="margin-bottom: 12px;">Free delivery *</li>
+            <li style="margin-bottom: 12px;">Returns in GHC</li>
+            <li style="margin-bottom: 12px;">24/7 support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr style="width: 90%; margin: 40px auto 20px;">
+    <div class="container copyright">
+      <p>© 2025 LUREX SHOPPING MALL — GHC OFFICIAL WEBSITE. All categories: clothing, furniture, shoes, bags, books, electronics, home & living. 🇬🇭 Cedis only.</p>
+      <p style="margin-top: 16px;"><i class="fas fa-store"></i> LUREX MALL: everything in GHC, everything delivered.</p>
+    </div>
+  </footer>
+
+  <!-- small floating GHC badge (marketing) -->
+  <div style="position: fixed; bottom: 30px; right: 30px; background: #eab308; color: #0c1a2b; border-radius: 100px; padding: 16px 24px; font-weight: 800; box-shadow: 0 10px 20px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 8px; border: 2px solid white;">
+    <i class="fas fa-cedi-sign" style="font-size: 1.5rem;"></i> 
+    <span style="font-size: 1.1rem;">SHOP GHC</span>
+  </div>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUREX SHOPPING MALL · GHC market</title>
+  <!-- Google Font & simple CSS reset -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free) for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f7f5;  /* warm light background – mall vibes */
+      color: #1e1e1e;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* marketing header — bold, premium, "LUREX MALL" */
+    .marketing-bar {
+      background: #0c1a2b; /* deep navy, luxury feel */
+      color: white;
+      padding: 10px 0;
+      font-size: 0.9rem;
+      letter-spacing: 0.8px;
+    }
+
+    .marketing-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .ghc-promo {
+      background: #eab308;
+      color: #0c1a2b;
+      padding: 6px 18px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ghc-promo i {
+      font-size: 1rem;
+    }
+
+    /* main header */
+    .main-header {
+      background: white;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 2px solid #f1ebe7;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .lurex-logo {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(145deg, #1e2c3a, #0f1a24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .lurex-tag {
+      background: #f0b90b;
+      color: #0c1a2b;
+      padding: 4px 14px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: inline-block;
+    }
+
+    .mall-badge {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .mall-badge span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #f4f2f0;
+      padding: 8px 18px;
+      border-radius: 40px;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    /* hero — massive marketing message */
+    .hero {
+      padding: 60px 0 40px;
+      background: linear-gradient(112deg, #fefcf9 0%, #fffaf5 100%);
+      border-bottom: 1px solid #e7dfd9;
+    }
+
+    .hero-grid {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1 1 300px;
+    }
+
+    .hero-text h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      color: #0c1a2b;
+      margin-bottom: 16px;
+    }
+
+    .hero-accent {
+      color: #b77b4a;  /* warm brass, premium */
+      border-bottom: 4px solid #eab308;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    .ghc-currency {
+      background: #0c1a2b;
+      color: #ffd966;
+      padding: 4px 14px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-left: 8px;
+    }
+
+    .hero-desc {
+      font-size: 1.2rem;
+      color: #3a4a5a;
+      margin: 24px 0 32px;
+      max-width: 550px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-number {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #0c1a2b;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: #5e6f7e;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero-visual {
+      flex: 1 1 300px;
+      background: #eaddd2;
+      border-radius: 40px 40px 40px 0;
+      padding: 30px 25px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      background-image: radial-gradient(circle at 80% 30%, #fff6e8 2%, transparent 30%);
+      box-shadow: 20px 20px 0 rgba(12,26,43,0.08);
+    }
+
+    .category-icon-bundle {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 22px;
+    }
+
+    .icon-card {
+      background: white;
+      width: 90px;
+      height: 90px;
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 0 #d2c1b3;
+      font-weight: 600;
+      color: #1e2e3f;
+      transition: all 0.2s;
+    }
+
+    .icon-card i {
+      font-size: 2.2rem;
+      margin-bottom: 6px;
+      color: #b77b4a;
+    }
+
+    .icon-card span {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    /* category sections – "sell all products" */
+    .section-title {
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin: 56px 0 16px;
+      color: #0c1a2b;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .section-title i {
+      color: #eab308;
+      font-size: 2rem;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 28px;
+      margin-top: 16px;
+    }
+
+    .category-card {
+      background: white;
+      padding: 28px 12px;
+      border-radius: 32px;
+      text-align: center;
+      transition: 0.2s ease;
+      border: 1px solid #efebe8;
+      box-shadow: 0 12px 0 #f1ebe7;
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+      border-color: #eab308;
+      box-shadow: 0 16px 0 #e7d8c4;
+    }
+
+    .category-card i {
+      font-size: 2.6rem;
+      color: #0f1e2c;
+      margin-bottom: 16px;
+    }
+
+    .category-card h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .category-card p {
+      color: #5f6c7a;
+      font-size: 0.9rem;
+    }
+
+    .mall-extra {
+      background: #e9e2db;
+      margin: 70px 0 30px;
+      padding: 48px 40px;
+      border-radius: 60px 20px 60px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .extra-text h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1a2c3b;
+    }
+
+    .extra-text p {
+      font-size: 1.1rem;
+      margin-top: 12px;
+      max-width: 500px;
+      color: #2b404e;
+    }
+
+    .ghc-stamp {
+      background: #0c1a2b;
+      padding: 18px 32px;
+      border-radius: 60px;
+      color: #ffde7a;
+      font-weight: 800;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      letter-spacing: 2px;
+      box-shadow: 12px 12px 0 #b38b5f;
+    }
+
+    /* GHC website specific banner */
+    .ghc-payments {
+      background: white;
+      border: 2px solid #ded1c5;
+      border-radius: 80px;
+      padding: 14px 30px;
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      margin: 40px 0 10px;
+      font-weight: 600;
+      flex-wrap: wrap;
+    }
+
+    .ghc-payments i {
+      font-size: 1.5rem;
+      color: #1e3a4e;
+    }
+
+    .btn {
+      background: #0c1a2b;
+      color: white;
+      padding: 16px 44px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      border: none;
+      cursor: pointer;
+      transition: 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      border: 2px solid #0c1a2b;
+    }
+
+    .btn:hover {
+      background: #eab308;
+      color: #0c1a2b;
+      border-color: #eab308;
+    }
+
+    .btn i {
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background: #0c1a2b;
+      color: #dbdbdb;
+      padding: 48px 0;
+      margin-top: 80px;
+      border-radius: 40px 40px 0 0;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+
+    .footer-logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: -0.5px;
+    }
+
+    .footer-logo span {
+      color: #eab308;
+      font-weight: 800;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 48px;
+      color: #a0aec0;
+      font-size: 0.9rem;
+    }
+
+    hr {
+      border: 0.5px solid #2a3a48;
+      margin: 30px 0 20px;
+    }
+    /* responsiveness */
+    @media (max-width: 700px) {
+      .hero-text h1 { font-size: 2.4rem; }
+      .section-title { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- top marketing bar — LUREX SHOPPING MALL message + GHC official -->
+  <div class="marketing-bar">
+    <div class="container">
+      <div style="display: flex; gap: 12px; align-items: center;">
+        <i class="fas fa-crown" style="color: #eab308;"></i>
+        <span style="font-weight: 600;">🇬🇭 LUREX MALL · ACCRA</span>
+      </div>
+      <div class="ghc-promo">
+        <i class="fas fa-coins"></i> ALL PRICES IN GHC • FREE DELIVERY OVER 500 GHC
+      </div>
+    </div>
+  </div>
+
+  <!-- header with logo & mall vibe -->
+  <header class="main-header">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <div class="logo-area">
+        <span class="lurex-logo">LUREX🛍️</span>
+        <span class="lurex-tag"><i class="fas fa-check-circle"></i> GHC MALL</span>
+      </div>
+      <div class="mall-badge">
+        <span><i class="fas fa-truck-fast"></i> 1-2 hrs · GHC</span>
+        <span><i class="fas fa-wallet"></i> Pay with GHC</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO: marketing punch "all products, clothing, furniture, shoes, bags, books, everything" -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>
+          <span class="hero-accent">EVERYTHING</span><br>UNDER ONE DOME
+        </h1>
+        <div style="display: flex; align-items: center; gap: 8px; margin-top: 8px;">
+          <span class="ghc-currency"><i class="fas fa-cedi-sign"></i> GHC ONLY</span>
+          <span style="background: #ffe8d9; padding: 6px 18px; border-radius: 40px; font-weight: 600;">2,000+ brands</span>
+        </div>
+        <p class="hero-desc">
+          <strong>LUREX SHOPPING MALL</strong> – your GHC destination for <strong>clothing, furniture, shoes, bags, books</strong> & beyond. 
+          Real stock, real GHC prices, real fast.
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">50k+</span>
+            <span class="stat-label">Happy GHC shoppers</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">15k</span>
+            <span class="stat-label">Items · GHC</span>
+          </div>
+        </div>
+        <div style="margin-top: 40px;">
+          <button class="btn"><i class="fas fa-bag-shopping"></i> SHOP GHC NOW</button>
+          <span style="margin-left: 20px; font-weight: 500;"><i class="fas fa-shield-alt"></i> secure checkout in Cedis</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <!-- visual representation of product categories: exactly clothing, furniture, shoes, bags, books + more -->
+        <div class="category-icon-bundle">
+          <div class="icon-card">
+            <i class="fas fa-shirt"></i>
+            <span>Clothing</span>
+          </div>
+          <div class="icon-card">
+            <i class="fas fa-couch"></i>
+            <span>Furniture</span>
+          </div>
+          <div class="icon-card">
+            <i class="fas fa-shoe-prints"></i>
+            <span>Shoes</span>
+          </div>
+          <div class="icon-card">
+            <i class="fas fa-bag-shopping"></i>
+            <span>Bags</span>
+          </div>
+          <div class="icon-card">
+            <i class="fas fa-book"></i>
+            <span>Books</span>
+          </div>
+          <div class="icon-card">
+            <i class="fas fa-ellipsis-h"></i>
+            <span>other</span>
+          </div>
+        </div>
+        <p style="width: 100%; text-align: center; margin-top: 16px; font-weight: 600; color: #2b404e;">
+          <i class="fas fa-tag" style="color: #b77b4a;"></i> GHC exclusive prices
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- GHC website payment & trust stripe -->
+    <div class="ghc-payments">
+      <i class="fas fa-cedi-sign"></i> GHC PRICING · 
+      <i class="fas fa-mobile-alt"></i> GHC MALL APP · 
+      <i class="fas fa-credit-card"></i> momo/gh-link · 
+      <span style="background: #0c1a2b; color: #f9d342; padding: 6px 16px; border-radius: 50px;">#LUREXGHC</span>
+    </div>
+  </div>
+  
+  <!-- MAIN SELL SECTION – ALL PRODUCT CATEGORIES (explicitly clothing, furniture, shoes, bags, books, other) -->
+  <div class="container">
+    <div class="section-title">
+      <i class="fas fa-store-alt"></i> 
+      <span>LUREX MART · GHC departments</span>
+    </div>
+    <p style="font-size: 1.2rem; margin-bottom: 16px; color: #3d4f5d;">Everything sold here — in Ghana Cedis (GHC) on official website</p>
+    
+    <div class="category-grid">
+      <!-- CLOTHING -->
+      <div class="category-card">
+        <i class="fas fa-tshirt"></i>
+        <h3>Clothing</h3>
+        <p>Shirts, dresses, native wear, jeans, kids · from 45 GHC</p>
+      </div>
+      <!-- FURNITURE -->
+      <div class="category-card">
+        <i class="fas fa-chair"></i>
+        <h3>Furniture</h3>
+        <p>Sofas, beds, tables, decor · pay in GHC, deliver today</p>
+      </div>
+      <!-- SHOES -->
+      <div class="category-card">
+        <i class="fas fa-footprint"></i>
+        <h3>Shoes</h3>
+        <p>Sneakers, heels, sandals, boots · 100% original GHC stock</p>
+      </div>
+      <!-- BAGS -->
+      <div class="category-card">
+        <i class="fas fa-shopping-bag"></i>
+        <h3>Bags</h3>
+        <p>Handbags, backpacks, travel · luxury & everyday GHC</p>
+      </div>
+      <!-- BOOKS -->
+      <div class="category-card">
+        <i class="fas fa-book-open"></i>
+        <h3>Books</h3>
+        <p>Fiction, textbooks, children · stationery, all in GHC</p>
+      </div>
+      <!-- OTHER STUFFS (explicit "other staffs") -->
+      <div class="category-card">
+        <i class="fas fa-boxes"></i>
+        <h3>Other stuffs</h3>
+        <p>Electronics, kitchen, toys, beauty · 10k+ items, GHC</p>
+      </div>
+    </div>
+
+    <!-- EXTRA: furniture + books + bags visual callout, marketing twist -->
+    <div style="background: #fcf7f0; border-radius: 60px; padding: 48px 32px; margin: 60px 0 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+      <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+        <div><i class="fas fa-couch" style="font-size: 2.6rem; color: #996633;"></i><br><span style="font-weight: 700;">350+ sofas</span><br><small>in GHC</small></div>
+        <div><i class="fas fa-gem" style="font-size: 2.6rem; color: #b77b4a;"></i><br><span style="font-weight: 700;">Lurex Luxe bags</span><br><small>from 299 GHC</small></div>
+        <div><i class="fas fa-book" style="font-size: 2.6rem; color: #2b5876;"></i><br><span style="font-weight: 700;">bestsellers</span><br><small>GHC 20–150</small></div>
+        <div><i class="fas fa-cedi-sign" style="font-size: 2.6rem; color: #0c1a2b;"></i><br><span style="font-weight: 700;">100% GHC</span><br><small>no forex</small></div>
+      </div>
+      <a href="#" style="background: #0c1a2b; color: white; padding: 16px 36px; border-radius: 60px; text-decoration: none; font-weight: 700;">GHC flash sale →</a>
+    </div>
+
+    <!-- massive marketing block: "LUREX SHOPPING MALL sell all products" -->
+    <div class="mall-extra">
+      <div class="extra-text">
+        <h2>🇬🇭 GHC WEBSITE • LUREX MALL</h2>
+        <p><strong>Sell everything:</strong> fashion, furniture, shoes, bags, books, electronics, sporting goods, toys & more. <span style="background: #eab308; padding: 3px 12px; border-radius: 60px; font-weight: 700;">over 45 categories</span></p>
+        <p style="font-size: 1rem; margin-top: 24px;"><i class="fas fa-check" style="background: #0c1a2b; color: white; border-radius: 50%; padding: 4px;"></i> Official GHC mall – no exchange rate surprises</p>
+      </div>
+      <div class="ghc-stamp">
+        <i class="fas fa-cedi-sign"></i> GHC
+      </div>
+    </div>
+
+    <!-- small gallery: other staffs (marketing) -->
+    <div style="display: flex; gap: 16px; margin-top: 20px; flex-wrap: wrap; justify-content: space-between;">
+      <div style="background: white; border-radius: 30px; padding: 20px 28px; box-shadow: 0 4px 0 #ddd; flex:1;"><i class="fas fa-robot" style="color: #3b5c7a;"></i> Electronics & accessories <strong>GHC prices</strong></div>
+      <div style="background: white; border-radius: 30px; padding: 20px 28px; box-shadow: 0 4px 0 #ddd; flex:1;"><i class="fas fa-baby"></i> Baby & kids <strong>GHC stock</strong></div>
+      <div style="background: white; border-radius: 30px; padding: 20px 28px; box-shadow: 0 4px 0 #ddd; flex:1;"><i class="fas fa-dog"></i> Pet supplies <strong>shop GHC</strong></div>
+    </div>
+  </div>
+
+  <!-- FOOTER — strong lurex shopping mall identity, GHC website -->
+  <footer>
+    <div class="container footer-content">
+      <div style="max-width: 300px;">
+        <div class="footer-logo">
+          LUREX<span>⸻MALL</span>
+        </div>
+        <p style="margin: 24px 0; color: #cbd5e0; font-size: 1.05rem;">Your one-stop GHC e‑commerce destination. Clothing, furniture, shoes, bags, books & other stuffs — all priced in Ghana Cedis.</p>
+        <div style="display: flex; gap: 22px; font-size: 1.6rem;">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-x-twitter"></i>
+          <i class="fab fa-tiktok"></i>
+        </div>
+      </div>
+      <div style="display: flex; gap: 60px; flex-wrap: wrap;">
+        <div>
+          <h4 style="color: white; font-size: 1.2rem; margin-bottom: 20px;">GHC mall</h4>
+          <ul style="list-style: none;">
+            <li style="margin-bottom: 12px;"><i class="fas fa-cedi-sign"></i> All prices GHC</li>
+            <li style="margin-bottom: 12px;">Clothing</li>
+            <li style="margin-bottom: 12px;">Furniture</li>
+            <li style="margin-bottom: 12px;">Shoes & bags</li>
+            <li style="margin-bottom: 12px;">Books & media</li>
+            <li style="margin-bottom: 12px;">Other stuffs</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: white; font-size: 1.2rem; margin-bottom: 20px;">LUREX PROMISE</h4>
+          <ul style="list-style: none;">
+            <li style="margin-bottom: 12px;">GHC protected payments</li>
+            <li style="margin-bottom: 12px;">Free delivery *</li>
+            <li style="margin-bottom: 12px;">Returns in GHC</li>
+            <li style="margin-bottom: 12px;">24/7 support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr style="width: 90%; margin: 40px auto 20px;">
+    <div class="container copyright">
+      <p>© 2025 LUREX SHOPPING MALL — GHC OFFICIAL WEBSITE. All categories: clothing, furniture, shoes, bags, books, electronics, home & living. 🇬🇭 Cedis only.</p>
+      <p style="margin-top: 16px;"><i class="fas fa-store"></i> LUREX MALL: everything in GHC, everything delivered.</p>
+    </div>
+  </footer>
+
+  <!-- small floating GHC badge (marketing) -->
+  <div style="position: fixed; bottom: 30px; right: 30px; background: #eab308; color: #0c1a2b; border-radius: 100px; padding: 16px 24px; font-weight: 800; box-shadow: 0 10px 20px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 8px; border: 2px solid white;">
+    <i class="fas fa-cedi-sign" style="font-size: 1.5rem;"></i> 
+    <span style="font-size: 1.1rem;">SHOP GHC</span>
+  </div>
+</body>
+</html>
